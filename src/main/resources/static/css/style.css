@@ -1,0 +1,161 @@
+@charset "UTF-8";
+
+html, body {
+	margin: 0;
+	height: 100%;
+	font-family: Arial, sans-serif;
+	background-image: url('/images/background.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+body {
+	display: flex;
+	justify-content: center; /* Centers the container horizontally */
+	align-items: center; /* Centers the container vertically */
+	height: 100vh; /* Takes full height of the viewport */
+	background-color: #fff;
+}
+
+
+
+.container {
+	width: 350px; /* Adjust the width of the container */
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+	box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+	/* Optional shadow for overall effect */
+	background-color: rgba(255, 255, 255, 0.1);
+	/* Make the container semi-transparent */
+	text-align: center;
+	position: relative; /* Required for positioning pseudo-elements */
+}
+
+/* Orange glow line at the top-left corner (horizontal) */
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px; /* Horizontal line width */
+    height: 0px; /* Horizontal line height */
+    background-color: orange;
+    box-shadow: 0 0 10px 2px orange; /* Glow effect */
+    border-top-left-radius: 5px; /* Optional: rounded corner on top-left */
+}
+
+/* Orange glow line at the top-left corner (vertical) */
+.container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0px; /* Vertical line thickness */
+    height: 150px; /* Vertical line height */
+    background-color: orange;
+    box-shadow: 0 0 10px 2px orange; /* Glow effect */
+    border-top-left-radius: 5px; /* Optional: rounded corner on top-left */
+}
+
+/* Green glow line at the bottom-right corner (horizontal) */
+.container .green-bottom-horizontal {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 150px; /* Horizontal line width */
+    height: 0px; /* Horizontal line height */
+    background-color: green;
+    box-shadow: 0 0 10px 2px green; /* Glow effect */
+    border-bottom-right-radius: 5px; /* Optional: rounded corner on bottom-right */
+}
+
+/* Green glow line at the bottom-right corner (vertical) */
+.container .green-bottom-vertical {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0px; /* Vertical line thickness */
+    height: 150px; /* Vertical line height */
+    background-color: green;
+    box-shadow: 0 0 10px 2px green; /* Glow effect */
+    border-bottom-right-radius: 5px; /* Optional: rounded corner on bottom-right */
+}
+
+.form-group {
+	margin-bottom: 15px;
+}
+
+.form-group label {
+	display: block;
+	margin-bottom: 5px;
+	color: navy;
+}
+
+.form-group input {
+	width: 100%;
+	padding: 8px;
+	box-sizing: border-box;
+	color: navy;
+	/* Change the text color inside the input fields to navy blue */
+	border: 1px solid #ccc; /* Optional: Border for input fields */
+	border-radius: 20px; /* Rounded input fields */
+	
+}
+.form-group input:focus {
+    border-color: #007BFF; /* Highlight border on focus */
+}
+
+.btn {
+	background-color: #007BFF;
+	color: white;
+	padding: 10px 15px;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background-color: #0056b3;
+}
+
+.message {
+	margin-top: 20px;
+	color: green;
+	font-weight: bold;
+}
+
+table {
+	width: 50%;
+	margin: auto;
+}
+
+table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+th, td {
+	padding: 10px;
+}
+
+caption {
+	font-size: 20px;
+	color: green;
+	text-decoration: underline;
+	margin-bottom: 20px;
+}
+
+.serial_no {
+	text-align: center;
+}
+
+a {
+    display: block;
+    margin-bottom: 10px; /* Adds space between links */
+}
+
+

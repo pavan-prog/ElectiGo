@@ -1,0 +1,48 @@
+/* Toggle container styling */
+.toggle-container {
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 20px;
+}
+ 
+/* Hidden checkbox input */
+.toggle-checkbox {
+  display: none;
+}
+ 
+/* Slider background */
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 20px;
+}
+ 
+/* Circle inside the slider */
+.toggle-slider::before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+ 
+/* Change background color when checked */
+.toggle-checkbox:checked + .toggle-slider {
+  background-color: #4caf50;
+}
+ 
+/* Move the circle to the right when checked */
+.toggle-checkbox:checked + .toggle-slider::before {
+  transform: translateX(20px);
+}

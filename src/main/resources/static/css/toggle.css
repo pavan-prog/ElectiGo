@@ -1,0 +1,59 @@
+/* General styling for the toggle button container */
+.toggle-container {
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  height: 30px;
+}
+
+/* Styling for the slider background */
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 30px;
+  transition: 0.4s;
+}
+
+/* Circle inside the toggle button */
+.toggle-slider::before {
+  content: "";
+  position: absolute;
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+/* The hidden checkbox input */
+.toggle-checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Change the slider background and position when toggled */
+.toggle-checkbox:checked + .toggle-slider {
+  background-color: #4caf50;
+}
+
+.toggle-checkbox:checked + .toggle-slider::before {
+  transform: translateX(30px);
+}
+
+/* Hover effects for slider */
+.toggle-slider:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover effects for active state */
+.toggle-checkbox:checked + .toggle-slider:hover {
+  box-shadow: 0 0 15px rgba(76, 175, 80, 0.6);
+}

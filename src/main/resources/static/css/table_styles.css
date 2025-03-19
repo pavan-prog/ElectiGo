@@ -1,0 +1,86 @@
+/* General Table Styling */
+table {
+    width: 90%; /* Table takes 90% of the width */
+    margin: 20px auto; /* Center the table with margin */
+    border-collapse: collapse; /* Remove gaps between cells */
+    font-family: Arial, sans-serif; /* Use a clean font */
+    background-color: #fff; /* White background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Clip content at borders */
+}
+
+caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: left;
+    margin: 10px 0;
+    color: #333; /* Dark text for the caption */
+}
+
+thead {
+    background-color: rgb(64, 0, 64); /* Light orange header */
+    color: #fff; /* White text */
+}
+
+thead th {
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 1em;
+}
+
+tbody tr {
+    border-bottom: 1px solid #ddd; /* Light gray row border */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light gray for alternating rows */
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1; /* Slightly darker on hover */
+}
+
+tbody td {
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 0.95em;
+    color: #333; /* Darker text */
+}
+
+tbody td a {
+    color: #fc9917; /* Orange link color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+    padding: 5px 10px;
+    border: 1px solid #fc9917;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+tbody td a:hover {
+    background-color: #fc9917; /* Orange background on hover */
+    color: #fff; /* White text on hover */
+}
+
+tfoot {
+    background-color: #fc9917; /* Same color as the header */
+    color: #fff;
+    text-align: center;
+}
+
+tfoot td {
+    padding: 12px 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    table {
+        font-size: 0.85em; /* Reduce font size on small screens */
+    }
+
+    tbody td a {
+        padding: 3px 7px; /* Adjust link padding */
+    }
+}
