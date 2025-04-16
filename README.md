@@ -9,7 +9,7 @@
 - **Role-Based Access Control (RBAC)**:
   - Super Admin: Manages elections and assigns subadmins.
   - Sub Admin: Manages elections, adds candidates, and authorizes registered voters.
-  - Voter: Casts a vote only once after registration and authorization.
+  - Voter: Casts a vote only once for election after registration and authorization.
   
 - **Election Management**: Super Admins can create and manage elections, which are assigned to Sub Admins for further processing.
 
