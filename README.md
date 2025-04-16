@@ -40,12 +40,3 @@ spring.datasource.url=jdbc:mysql://localhost:3306/electigo_db
 spring.datasource.username=root
 spring.datasource.password=yourpassword
 
-Architecture
-
-The project follows the MVC architecture (Model-View-Controller) with a clear separation of concerns. It is organized into the following layers:
-
-    Controller Layer: Handles HTTP requests and responses, directing them to the appropriate service methods.
-
-    Service Layer: Contains business logic and service methods that are called by the controller.
-
-    Repository Layer: Manages database operations, handling interactions with the data layer using Spring Data JPA or MongoDB.
