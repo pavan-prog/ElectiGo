@@ -57,7 +57,7 @@ docker network create electigo-network
 ### Run the MYSQL container 
 connect it to the created network
 ```
-docker run --name mysql-container --network electigo-network -e MYSQL_ROOT_PASSWORD=yourpassword -e MYSQL_DATABASE=electigo_db -d mysql:latest
+docker run --name mysql-container --network electigo-network -e MYSQL_ROOT_PASSWORD=yourpassword -e MYSQL_DATABASE=electigo_db -p 3306:3306 -d mysql:latest
 ```
 ### Copy the SQL Dump File to the Container
 Ensure you are in the directory where Dump20250421.sql is located (e.g., your Downloads folder)
@@ -86,7 +86,7 @@ SELECT * FROM admin;
 ```
 ```
 SELECT * FROM candidates;
-``
+```
 
 ### Run the ElectiGo Application container
 connect it to the created network
