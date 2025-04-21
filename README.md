@@ -35,9 +35,40 @@
 git clone https://github.com/your-username/ElectiGo.git
 ```
 ### Configure the Database
+```
 spring.datasource.url=jdbc:mysql://localhost:3306/electigo_db
 spring.datasource.username=root
 spring.datasource.password=your_password
+```
 
+### Build the Docker image
+```
+docker build -t electigo-app .
+```
+### Pull the MYSQL Docker image
+```
+docker pull mysql:latest
+```
+### Create a Docker network
+```
+docker network create electigo-network
+```
 
+### Run the MYSQL container 
+connect it to the created network
+```
+docker run --name mysql-container --network electigo-network -e MYSQL_ROOT_PASSWORD=yourpassword -e MYSQL_DATABASE=electigo_db -d mysql:latest
+```
 
+### Run the ElectiGo Application container
+connect it to the created network
+
+```
+docker run --name electigo-app-container --network electigo-network -p 8080:8080 -d electigo-app
+```
+
+### Access the Application
+Once both containers are running, you can access the ElectiGo application at 
+```
+http://localhost:8080
+```
