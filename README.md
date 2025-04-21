@@ -1,4 +1,4 @@
-# ElectiGo
+# ElectiGo (Monolithic Application)
 
 **ElectiGo** is an online-based election management system where **Super Admin**, **Sub Admin**, and **Voters** interact within a role-based access control scheme. The application allows Super Admins to create and manage elections, Sub Admins to oversee the elections and candidates, and Voters to securely cast their votes after authorization.
 
