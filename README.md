@@ -32,7 +32,7 @@
 
 ### Clone the repository
 ```
-git clone https://github.com/your-username/ElectiGo.git
+git clone https://github.com/pavan-prog/ElectiGo.git
 ```
 ### Configure the Database
 ```
