@@ -30,13 +30,14 @@
 
 ## ⚙️ Setup Instructions
 
-**Clone the repository:**
-
-```bash
+### Clone the repository
+```
 git clone https://github.com/your-username/ElectiGo.git
-
-# Example for MySQL
+```
+### Configure the Database
 spring.datasource.url=jdbc:mysql://localhost:3306/electigo_db
 spring.datasource.username=root
-spring.datasource.password=yourpassword
+spring.datasource.password=your_password
+
+
 
